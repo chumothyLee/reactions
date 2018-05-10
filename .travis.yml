@@ -1,0 +1,25 @@
+# safelist
+branches:
+  only:
+  - master
+language: node_js
+node_js:
+  - "stable"
+sudo: false
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+  - cd ./client && npm install && cd ..
+script:
+  - cd ./client && npm test && cd ..
+  - cd ./client && npm run build && cd ..
+deploy:
+  - provider: firebase
+    project: reactions
+    token:
+      secure: 1/LzQlj1NE9M_9dE9cQTIwq4sKVTnEDaTFGITdoyH4fQ4
+    skip_cleanup: true
+    on:
+      branch: master
