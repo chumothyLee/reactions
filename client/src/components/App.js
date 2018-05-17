@@ -3,7 +3,6 @@ import CommentFeed from './CommentFeed';
 import CommentInput from './CommentInput';
 import CommentCard from './CommentCard';
 import { Grid, Paper } from '@material-ui/core';
-import grey from '@material-ui/core/colors/grey';
 
 class App extends Component {
   

@@ -6,7 +6,7 @@ const CommentInput = (props) => {
     const avatar =  usernameSplit.length === 1 ? usernameSplit[0][0] : usernameSplit[0][0] + usernameSplit[usernameSplit.length - 1][0];
     const styles = {
         extraMargin: {
-            margin:'10px'
+            margin:'15px'
         }
     }
     return(
